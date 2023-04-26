@@ -9,6 +9,8 @@ docs/_build
 .DS_Store
 .eggs/
 wheelhouse/
+fixed_wheels/
 docs/License.html
 pymediainfo/libmediainfo.*
+pymediainfo/libzen.*
 pymediainfo/MediaInfo.dll

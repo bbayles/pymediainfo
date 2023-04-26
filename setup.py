@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os
+from os.path import exists
 
 from setuptools import Distribution, find_packages, setup
 
@@ -14,13 +14,13 @@ class ExtensionDistribution(Distribution):
         return True
 
 
-bin_license = 'docs/License.html'
-if os.path.exists(bin_license):
-    data_files.append(('docs', [bin_license]))
-    bin_files.extend(['MediaInfo.dll', 'libmediainfo.*'])
-    distclass = ExtensionDistribution
-else:
-    distclass = Distribution
+for license_path in ('docs/License.html', 'docs/LICENSE'):
+    if exists(license_path):
+        data_files.append(('docs', [license_path]))
+        bin_files.extend(['MediaInfo.dll', 'libmediainfo.*', 'libzen.*'])
+        break
+
+distclass = ExtensionDistribution if bin_files else Distribution
 
 
 setup(
