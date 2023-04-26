@@ -4,5 +4,11 @@
 *.dll
 *.egg-info
 build
-dist
+dist/
 docs/_build
+.DS_Store
+.eggs/
+wheelhouse/
+docs/License.html
+pymediainfo/libmediainfo.*
+pymediainfo/MediaInfo.dll
