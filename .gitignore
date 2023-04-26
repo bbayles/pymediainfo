@@ -11,6 +11,7 @@ docs/_build
 wheelhouse/
 fixed_wheels/
 docs/License.html
+docs/LICENSE
 pymediainfo/libmediainfo.*
 pymediainfo/libzen.*
 pymediainfo/MediaInfo.dll
